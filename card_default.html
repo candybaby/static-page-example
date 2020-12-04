@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>custom demo</title>
+<!--載入 VUE-->
+<script src="https://unpkg.com/vue"></script>
+<!--載入客製化元件包(是不同專案做出來的 web components)-->
+<script src="https://candybaby.github.io/vue-web-component/custom.js"></script>
+
+<body>
+
+<div id="app">
+    <!--使用客製化元件中的商品卡片(原始樣式)-->
+    <custom-product-card v-bind:content-text= 'productContent'></custom-product-card>
+</div>
+
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            productContent: '商品名稱'
+        }
+    })
+</script>
+
+</html>
